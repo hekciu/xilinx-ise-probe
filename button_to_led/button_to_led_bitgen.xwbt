@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/hekciu/programming/xilinx-ise-probe/button_to_led/button_to_led.ncd
+OUTFILE=/home/hekciu/programming/xilinx-ise-probe/button_to_led/button_to_led.bit
+FAMILY=Spartan6
+PART=xc6slx9-3csg324
+WORKINGDIR=/home/hekciu/programming/xilinx-ise-probe/button_to_led
+LICENSE=WebPack
+USER_INFO=213625811_0_0_933

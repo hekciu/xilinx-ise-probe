@@ -210,45 +210,37 @@
     <transform xil_pn:end_ts="1762786281" xil_pn:in_ck="3219671432047983" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-271136905565048618" xil_pn:start_ts="1762786275">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Blinky.bld"/>
-      <outfile xil_pn:name="Blinky.ngd"/>
-      <outfile xil_pn:name="Blinky_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1762786295" xil_pn:in_ck="3219671432047984" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1405206279585514545" xil_pn:start_ts="1762786281">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Blinky.pcf"/>
-      <outfile xil_pn:name="Blinky_map.map"/>
-      <outfile xil_pn:name="Blinky_map.mrp"/>
-      <outfile xil_pn:name="Blinky_map.ncd"/>
-      <outfile xil_pn:name="Blinky_map.ngm"/>
-      <outfile xil_pn:name="Blinky_map.xrpt"/>
-      <outfile xil_pn:name="Blinky_summary.xml"/>
-      <outfile xil_pn:name="Blinky_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1762786312" xil_pn:in_ck="-200056805306518391" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1762786295">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Blinky.ncd"/>
-      <outfile xil_pn:name="Blinky.pad"/>
-      <outfile xil_pn:name="Blinky.par"/>
-      <outfile xil_pn:name="Blinky.ptwx"/>
-      <outfile xil_pn:name="Blinky.unroutes"/>
-      <outfile xil_pn:name="Blinky.xpi"/>
-      <outfile xil_pn:name="Blinky_pad.csv"/>
-      <outfile xil_pn:name="Blinky_pad.txt"/>
-      <outfile xil_pn:name="Blinky_par.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1762786312" xil_pn:in_ck="3219671432047852" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1762786306">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Blinky.twr"/>
-      <outfile xil_pn:name="Blinky.twx"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 
