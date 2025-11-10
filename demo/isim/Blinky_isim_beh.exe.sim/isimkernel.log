@@ -1,0 +1,29 @@
+Command line:
+   Blinky_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57971
+
+Mon Nov 10 16:08:31 2025
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 183.661 Meg
+
+ Total Signals          : 14
+ Total Nets             : 14
+ Total Signal Drivers   : 10
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 6
+ Total Traceable Variables  : 12
+ Total Scalar Nets and Variables : 378
+Total Line Count : 22
+
+ Total Simulation Time: 76.4 sec
+
+ Current Memory Usage: 259.162 Meg
+
+Mon Nov 10 17:09:01 2025
+

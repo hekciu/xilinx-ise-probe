@@ -5,5 +5,17 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">r_CNT_10HZ_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Blinky</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;r_CNT_1HZ_3&gt; &lt;r_CNT_50HZ_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">r_CNT_100HZ_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Blinky</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;r_CNT_10HZ_0&gt; &lt;r_CNT_1HZ_0&gt; &lt;r_CNT_50HZ_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">r_CNT_100HZ_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Blinky</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;r_CNT_10HZ_1&gt; &lt;r_CNT_1HZ_1&gt; &lt;r_CNT_50HZ_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">r_CNT_100HZ_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Blinky</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;r_CNT_10HZ_2&gt; &lt;r_CNT_1HZ_2&gt; &lt;r_CNT_50HZ_2&gt; </arg>
+</msg>
+
 </messages>
 

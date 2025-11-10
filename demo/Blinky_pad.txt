@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Oct 31 14:44:16 2025
+Mon Nov 10 15:51:45 2025
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -9,8 +9,8 @@ INFO: The IO information is provided in three file formats as part of the Place 
 2. The <design namd>_pad.csv file for use with spreadsheet programs such as MS Excel. This file can also be read by PACE to communicate post PAR IO information.
 3. The <design name>.pad file designed for parsing by customers.  It uses the "|" as a data field separator.
 
-INPUT FILE:       Adder_map.ncd
-OUTPUT FILE:      Adder_pad.txt
+INPUT FILE:       Blinky_map.ncd
+OUTPUT FILE:      Blinky_pad.txt
 PART TYPE:        xc6slx9
 SPEED GRADE:      -3
 PACKAGE:          csg324
@@ -184,7 +184,7 @@ Pinout by Pin Number:
 |J18       |           |IOBS     |IO_L44N_A2_M1DQ7_1           |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |K1        |           |IOBS     |IO_L38N_M3DQ3_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |K2        |           |IOBM     |IO_L38P_M3DQ2_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
-|K3        |           |IOBS     |IO_L42N_GCLK24_M3LDM_3       |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|K3        |i_clock    |IOB      |IO_L42N_GCLK24_M3LDM_3       |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |K4        |           |IOBM     |IO_L42P_GCLK25_TRDY2_M3UDM_3 |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |K5        |           |IOBS     |IO_L43N_GCLK22_IRDY2_M3CASN_3|UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |K6        |           |IOBS     |IO_L45N_M3ODT_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
@@ -279,7 +279,7 @@ Pinout by Pin Number:
 |R5        |           |IOBM     |IO_L48P_D7_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |R6        |           |         |VCCO_2                       |         |           |2             |          |         |           |         |2.50     |          |           |                |
 |R7        |           |IOBM     |IO_L46P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|R8        |Cout       |IOB      |IO_L31P_GCLK31_D14_2         |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|R8        |i_switch_1 |IOB      |IO_L31P_GCLK31_D14_2         |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |R9        |           |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |R10       |           |IOBM     |IO_L29P_GCLK3_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |R11       |           |IOBM     |IO_L16P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
@@ -297,8 +297,8 @@ Pinout by Pin Number:
 |T5        |           |IOBS     |IO_L48N_RDWR_B_VREF_2        |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T6        |           |IOBM     |IO_L45P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T7        |           |IOBS     |IO_L46N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|T8        |A          |IOB      |IO_L31N_GCLK30_D15_2         |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|T9        |B          |IOB      |IO_L32P_GCLK29_2             |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|T8        |i_switch_2 |IOB      |IO_L31N_GCLK30_D15_2         |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|T9        |i_enable   |IOB      |IO_L32P_GCLK29_2             |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |T10       |           |IOBS     |IO_L29N_GCLK2_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T11       |           |IOBS     |IO_L16N_VREF_2               |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T12       |           |         |NC                           |         |           |              |          |         |           |         |         |          |           |                |
@@ -333,8 +333,8 @@ Pinout by Pin Number:
 |V5        |           |IOBS     |IO_L49N_D4_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V6        |           |IOBS     |IO_L45N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V7        |           |IOBS     |IO_L43N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|V8        |Cin        |IOB      |IO_L41N_VREF_2               |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
-|V9        |Sum        |IOB      |IO_L32N_GCLK28_2             |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|V8        |           |IOBS     |IO_L41N_VREF_2               |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
+|V9        |o_led_drive|IOB      |IO_L32N_GCLK28_2             |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |V10       |           |IOBS     |IO_L30N_GCLK0_USERCCLK_2     |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V11       |           |IOBS     |IO_L23N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V12       |           |         |NC                           |         |           |              |          |         |           |         |         |          |           |                |

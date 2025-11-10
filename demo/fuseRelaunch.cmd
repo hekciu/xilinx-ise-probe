@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/hekciu/programming/xilinx-ise-probe/demo/Blinky_isim_beh.exe" -prj "/home/hekciu/programming/xilinx-ise-probe/demo/Blinky_beh.prj" "work.Blinky" 

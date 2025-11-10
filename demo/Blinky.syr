@@ -1,0 +1,416 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: Blinky.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Blinky.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Blinky"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-csg324
+
+---- Source Options
+Top Module Name                    : Blinky
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/hekciu/programming/xilinx-ise-probe/demo/Blinky.vhd" into library work
+Parsing entity <Blinky>.
+Parsing architecture <Behavioral> of entity <blinky>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Blinky> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Blinky>.
+    Related source file is "/home/hekciu/programming/xilinx-ise-probe/demo/Blinky.vhd".
+    Found 17-bit register for signal <r_CNT_100HZ>.
+    Found 1-bit register for signal <r_TOGGLE_50HZ>.
+    Found 18-bit register for signal <r_CNT_50HZ>.
+    Found 1-bit register for signal <r_TOGGLE_10HZ>.
+    Found 21-bit register for signal <r_CNT_10HZ>.
+    Found 1-bit register for signal <r_TOGGLE_1HZ>.
+    Found 24-bit register for signal <r_CNT_1HZ>.
+    Found 1-bit register for signal <r_TOGGLE_100HZ>.
+    Found 17-bit adder for signal <r_CNT_100HZ[16]_GND_3_o_add_1_OUT> created at line 68.
+    Found 18-bit adder for signal <r_CNT_50HZ[17]_GND_3_o_add_5_OUT> created at line 81.
+    Found 21-bit adder for signal <r_CNT_10HZ[20]_GND_3_o_add_9_OUT> created at line 94.
+    Found 24-bit adder for signal <r_CNT_1HZ[23]_GND_3_o_add_13_OUT> created at line 107.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  84 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <Blinky> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 17-bit adder                                          : 1
+ 18-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 24-bit adder                                          : 1
+# Registers                                            : 8
+ 1-bit register                                        : 4
+ 17-bit register                                       : 1
+ 18-bit register                                       : 1
+ 21-bit register                                       : 1
+ 24-bit register                                       : 1
+# Multiplexers                                         : 3
+ 1-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Blinky>.
+The following registers are absorbed into counter <r_CNT_100HZ>: 1 register on signal <r_CNT_100HZ>.
+The following registers are absorbed into counter <r_CNT_10HZ>: 1 register on signal <r_CNT_10HZ>.
+The following registers are absorbed into counter <r_CNT_50HZ>: 1 register on signal <r_CNT_50HZ>.
+The following registers are absorbed into counter <r_CNT_1HZ>: 1 register on signal <r_CNT_1HZ>.
+Unit <Blinky> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 17-bit up counter                                     : 1
+ 18-bit up counter                                     : 1
+ 21-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Multiplexers                                         : 3
+ 1-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Blinky> ...
+INFO:Xst:2261 - The FF/Latch <r_CNT_10HZ_3> in Unit <Blinky> is equivalent to the following 2 FFs/Latches, which will be removed : <r_CNT_1HZ_3> <r_CNT_50HZ_3> 
+INFO:Xst:2261 - The FF/Latch <r_CNT_100HZ_0> in Unit <Blinky> is equivalent to the following 3 FFs/Latches, which will be removed : <r_CNT_10HZ_0> <r_CNT_1HZ_0> <r_CNT_50HZ_0> 
+INFO:Xst:2261 - The FF/Latch <r_CNT_100HZ_1> in Unit <Blinky> is equivalent to the following 3 FFs/Latches, which will be removed : <r_CNT_10HZ_1> <r_CNT_1HZ_1> <r_CNT_50HZ_1> 
+INFO:Xst:2261 - The FF/Latch <r_CNT_100HZ_2> in Unit <Blinky> is equivalent to the following 3 FFs/Latches, which will be removed : <r_CNT_10HZ_2> <r_CNT_1HZ_2> <r_CNT_50HZ_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Blinky, actual ratio is 2.
+FlipFlop r_CNT_100HZ_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 74
+ Flip-Flops                                            : 74
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Blinky.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 317
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 76
+#      LUT2                        : 19
+#      LUT3                        : 1
+#      LUT4                        : 16
+#      LUT5                        : 22
+#      LUT6                        : 32
+#      MUXCY                       : 76
+#      VCC                         : 1
+#      XORCY                       : 69
+# FlipFlops/Latches                : 74
+#      FD                          : 74
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 3
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              74  out of  11440     0%  
+ Number of Slice LUTs:                  170  out of   5720     2%  
+    Number used as Logic:               170  out of   5720     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    171
+   Number with an unused Flip Flop:      97  out of    171    56%  
+   Number with an unused LUT:             1  out of    171     0%  
+   Number of fully used LUT-FF pairs:    73  out of    171    42%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    200     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+i_clock                            | BUFGP                  | 74    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.038ns (Maximum Frequency: 247.623MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 5.432ns
+   Maximum combinational path delay: 6.081ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'i_clock'
+  Clock period: 4.038ns (frequency: 247.623MHz)
+  Total number of paths / destination ports: 2332 / 74
+-------------------------------------------------------------------------
+Delay:               4.038ns (Levels of Logic = 3)
+  Source:            r_CNT_10HZ_10 (FF)
+  Destination:       r_CNT_10HZ_3 (FF)
+  Source Clock:      i_clock rising
+  Destination Clock: i_clock rising
+
+  Data Path: r_CNT_10HZ_10 to r_CNT_10HZ_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.981  r_CNT_10HZ_10 (r_CNT_10HZ_10)
+     LUT6:I0->O            2   0.203   0.845  PWR_3_o_r_CNT_10HZ[20]_equal_9_o<20>3 (PWR_3_o_r_CNT_10HZ[20]_equal_9_o<20>2)
+     LUT6:I3->O           18   0.205   1.050  PWR_3_o_r_CNT_10HZ[20]_equal_9_o<20>5 (PWR_3_o_r_CNT_10HZ[20]_equal_9_o)
+     LUT2:I1->O            1   0.205   0.000  r_CNT_10HZ_3_rstpot (r_CNT_10HZ_3_rstpot)
+     FD:D                      0.102          r_CNT_10HZ_3
+    ----------------------------------------
+    Total                      4.038ns (1.162ns logic, 2.876ns route)
+                                       (28.8% logic, 71.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'i_clock'
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Offset:              5.432ns (Levels of Logic = 3)
+  Source:            r_TOGGLE_10HZ (FF)
+  Destination:       o_led_drive (PAD)
+  Source Clock:      i_clock rising
+
+  Data Path: r_TOGGLE_10HZ to o_led_drive
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.845  r_TOGGLE_10HZ (r_TOGGLE_10HZ)
+     LUT3:I0->O            1   0.205   0.580  o_led_drive_SW0 (N6)
+     LUT6:I5->O            1   0.205   0.579  o_led_drive (o_led_drive_OBUF)
+     OBUF:I->O                 2.571          o_led_drive_OBUF (o_led_drive)
+    ----------------------------------------
+    Total                      5.432ns (3.428ns logic, 2.004ns route)
+                                       (63.1% logic, 36.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Delay:               6.081ns (Levels of Logic = 4)
+  Source:            i_switch_1 (PAD)
+  Destination:       o_led_drive (PAD)
+
+  Data Path: i_switch_1 to o_led_drive
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.721  i_switch_1_IBUF (i_switch_1_IBUF)
+     LUT3:I1->O            1   0.203   0.580  o_led_drive_SW0 (N6)
+     LUT6:I5->O            1   0.205   0.579  o_led_drive (o_led_drive_OBUF)
+     OBUF:I->O                 2.571          o_led_drive_OBUF (o_led_drive)
+    ----------------------------------------
+    Total                      6.081ns (4.201ns logic, 1.880ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock i_clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+i_clock        |    4.038|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.78 secs
+ 
+--> 
+
+
+Total memory usage is 373124 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+
